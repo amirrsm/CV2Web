@@ -1,0 +1,141 @@
+# CV2Web Resume Configuration
+# Copy this file to resume.yaml and customize with your information
+
+personal:
+  name: "Your Name"
+  title: "Your Job Title"
+  photo: "photo.png"  # Path to your photo in public/ directory
+  
+  links:
+    github:
+      username: "yourusername"
+      url: "https://github.com/yourusername"
+    linkedin:
+      username: "LinkedIn"
+      url: "https://www.linkedin.com/in/yourprofile/"
+    email:
+      address: "your.email@example.com"
+    telegram:
+      username: "@yourusername"
+      url: "https://t.me/yourusername"
+
+summary: |
+  Your professional summary here. This can be multiple paragraphs.
+  Just write it as you would normally.
+
+colors:
+  background: "#020202"
+  foreground: "#CECFC7"
+  card: "#1a1a1a"
+  cardForeground: "#CECFC7"
+  popover: "#1a1a1a"
+  popoverForeground: "#CECFC7"
+  primary: "#3E6259"
+  primaryForeground: "#CECFC7"
+  secondary: "#2a2a2a"
+  secondaryForeground: "#CECFC7"
+  muted: "#2a2a2a"
+  mutedForeground: "#9a9a9a"
+  accent: "#3E6259"
+  accentForeground: "#CECFC7"
+  destructive: "#dc2626"
+  destructiveForeground: "#CECFC7"
+  border: "#3E6259"
+  input: "#2a2a2a"
+  ring: "#3E6259"
+  chart1: "#3E6259"
+  chart2: "#CECFC7"
+  chart3: "#5a7a72"
+  chart4: "#8a9a94"
+  chart5: "#a0b0aa"
+
+fonts:
+  sans: "Geist"  # Google Font name
+  mono: "Geist Mono"
+
+canvas:
+  halftoneSize: 0.0001
+  contrast: 1
+  accentColor: "#CECFC7"
+  mouseRadius: 100
+  repulsionStrength: 1.5
+  returnSpeed: 0.6
+  accentProbability: 0.2
+  sizeVariation: 0.1
+
+experience:
+  - title: "Senior Software Engineer"
+    company: "Company Name"
+    period: "Jan 2023 - Present"
+    responsibilities:
+      - "Responsibility 1"
+      - "Responsibility 2"
+      - "Responsibility 3"
+  
+  - title: "Software Engineer"
+    company: "Previous Company"
+    period: "Jan 2020 - Dec 2022"
+    responsibilities:
+      - "Responsibility 1"
+      - "Responsibility 2"
+
+projects:
+  - title: "Project Name"
+    period: "Jan 2024 - Present"
+    description: |
+      Project description here.
+    points:
+      - "Key achievement 1"
+      - "Key achievement 2"
+      - "Key achievement 3"
+    span: 1  # 1 or 2 columns (optional, default 1)
+  
+  - title: "Another Project"
+    period: "Jan 2023 - Dec 2023"
+    description: |
+      Another project description.
+    points:
+      - "Achievement 1"
+      - "Achievement 2"
+    span: 1
+
+volunteering:
+  - title: "Volunteer Position"
+    organization: "Organization Name"
+    period: "Jan 2024 · 1 mo"
+    description: "Description of your volunteer work."
+    link:
+      text: "View Link"
+      url: "https://example.com"
+
+skills:
+  technologies:
+    - "Python"
+    - "JavaScript"
+    - "React"
+    - "Node.js"
+  
+  platforms:
+    - "AWS"
+    - "Docker"
+    - "Kubernetes"
+  
+  soft:
+    - "Problem Solving"
+    - "Teamwork"
+    - "Communication"
+
+education:
+  - degree: "Bachelor's degree, Computer Science"
+    institution: "University Name"
+    period: "Sep 2020 - May 2024"
+  
+  - degree: "Associate's degree, Computer Science"
+    institution: "Community College"
+    period: "Sep 2018 - May 2020"
+
+languages:
+  - "English"
+  - "Spanish"
+  - "French"
+
