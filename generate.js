@@ -27,7 +27,7 @@ function formatMultiline(text) {
 
 // Generate page.tsx
 function generatePage(resume) {
-  const { personal, summary, experience, projects, volunteering, skills, education, languages, canvas } = resume;
+  const { personal, summary, experience, projects, volunteering, skills, education, languages } = resume;
   
   const nameParts = personal.name.split(' ');
   const firstName = nameParts[0] || '';
@@ -51,16 +51,6 @@ function generatePage(resume) {
 
 import { useState, useEffect } from "react"
 import { ${links.map(l => l.icon).join(', ')} } from "lucide-react"
-import { ImageCanvas } from "@/components/image-canvas"
-
-const HALFTONE_SIZE = ${canvas?.halftoneSize ?? 0.0001}
-const CONTRAST = ${canvas?.contrast ?? 1}
-const ACCENT_COLOR = "${canvas?.accentColor ?? '#CECFC7'}"
-const MOUSE_RADIUS = ${canvas?.mouseRadius ?? 100}
-const REPULSION_STRENGTH = ${canvas?.repulsionStrength ?? 1.5}
-const RETURN_SPEED = ${canvas?.returnSpeed ?? 0.6}
-const ACCENT_PROBABILITY = ${canvas?.accentProbability ?? 0.2}
-const SIZE_VARIATION = ${canvas?.sizeVariation ?? 0.1}
 
 export default function Home() {
   const [image, setImage] = useState<HTMLImageElement | null>(null)
@@ -87,16 +77,10 @@ export default function Home() {
             <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
               <div className="relative w-full max-w-lg aspect-4/3 rounded-2xl overflow-hidden border-4 border-primary shadow-2xl">
                 {image ? (
-                  <ImageCanvas
-                    image={image}
-                    halftoneSize={HALFTONE_SIZE}
-                    contrast={CONTRAST}
-                    accentColor={ACCENT_COLOR}
-                    mouseRadius={MOUSE_RADIUS}
-                    repulsionStrength={REPULSION_STRENGTH}
-                    returnSpeed={RETURN_SPEED}
-                    accentProbability={ACCENT_PROBABILITY}
-                    sizeVariation={SIZE_VARIATION}
+                    <img
+                    src={image.src}
+                    alt="Profile"
+                    className="w-full h-full object-cover"
                   />
                 ) : (
                   <div className="w-full h-full bg-card flex items-center justify-center">
