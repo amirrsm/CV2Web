@@ -52,6 +52,7 @@ Run the setup script to copy template files and create initial resume.yaml:
 ```
 
 This will:
+
 - Copy template files (components, lib) to the project root
 - Create `resume.yaml` from `resume.example.yaml` if it doesn't exist
 - Set up the project structure
@@ -59,6 +60,7 @@ This will:
 ### 4. Set Up Your Resume
 
 Edit `resume.yaml` with your information. You can customize:
+
 - Personal information (name, title, photo, links)
 - Summary
 - Professional experience
@@ -89,6 +91,7 @@ Visit `http://localhost:3000` to see your resume website.
 ### 7. Deploy with GitHub Actions
 
 1. **Push your code to GitHub**:
+
    ```bash
    git add .
    git commit -m "Initial commit with my resume"
@@ -106,12 +109,25 @@ Visit `http://localhost:3000` to see your resume website.
    - You can also manually trigger it from the **Actions** tab → **Build and Deploy** → **Run workflow**
 
 The GitHub Actions workflow will:
+
 - Copy template files
 - Generate the site from `resume.yaml`
 - Build the Next.js site
 - Deploy to GitHub Pages
 
 Your site will be available at `https://yourusername.github.io` (after the build completes, usually takes 1-2 minutes).
+
+> **Custom Domain (e.g., `example.com`)**
+>
+> 1. In your domain provider's DNS settings, point your domain to GitHub Pages:
+>    - **Root domain** (e.g., `example.com`): add **A records** pointing to GitHub Pages IPs:
+>       - `185.199.108.153`
+>       - `185.199.109.153`
+>       - `185.199.110.153`
+>       - `185.199.111.153`
+>    - **Subdomain** (e.g., `www.example.com`): add a **CNAME record** pointing to `yourusername.github.io`
+> 2. In your GitHub repository, go to **Settings** → **Pages** → **Custom domain** and enter your domain (e.g., `example.com` or `www.example.com`)
+> 3. Save, then enable **"Enforce HTTPS"** once GitHub has issued the certificate (DNS changes may take up to 24 hours)
 
 ## Resume YAML Structure
 
@@ -193,6 +209,7 @@ CV2Web/
 ### Changing Colors
 
 Edit the `colors` section in `resume.yaml`. All colors use hex format (`#RRGGBB`). The color palette includes:
+
 - `background` - Main background color
 - `foreground` - Main text color
 - `primary` - Primary accent color
@@ -202,12 +219,13 @@ Edit the `colors` section in `resume.yaml`. All colors use hex format (`#RRGGBB`
 ### Changing Fonts
 
 Update the `fonts` section in `resume.yaml`. Use any Google Font name. Common choices:
+
 - Sans-serif: `"Inter"`, `"Roboto"`, `"Open Sans"`, `"Geist"`
 - Monospace: `"Fira Code"`, `"Source Code Pro"`, `"Geist Mono"`
 
 ## Requirements
 
-- Node.js 20+ 
+- Node.js 20+
 - npm or yarn
 
 ## License
