@@ -113,6 +113,17 @@ The GitHub Actions workflow will:
 
 Your site will be available at `https://yourusername.github.io` (after the build completes, usually takes 1-2 minutes).
 
+> **Custom Domain (e.g., `example.com`)**
+> 1. In your domain provider's DNS settings, point your domain to GitHub Pages:
+>    - **Root domain** (e.g., `example.com`): add **A records** pointing to GitHub Pages IPs: 
+>       - `185.199.108.153`
+>       - `185.199.109.153` 
+>       - `185.199.110.153`
+>       - `185.199.111.153`
+>    - **Subdomain** (e.g., `www.example.com`): add a **CNAME record** pointing to `yourusername.github.io`
+> 2. In your GitHub repository, go to **Settings** → **Pages** → **Custom domain** and enter your domain (e.g., `example.com` or `www.example.com`)
+> 3. Save, then enable **"Enforce HTTPS"** once GitHub has issued the certificate (DNS changes may take up to 24 hours)
+
 ## Resume YAML Structure
 
 ### Personal Information
